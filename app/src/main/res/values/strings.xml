@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BeerCafes V1</string>
+    <string name="list">Cafes</string>
+    <string name="favourites">Favourite Cafes</string>
+    <string name="clearFavs">Clear</string>
+    <string name="addToFavs">Add To favourites</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

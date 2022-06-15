@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.beercafesv1.screens.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_cafeListFragment"
+            app:destination="@id/cafeListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cafeListFragment"
+        android:name="com.example.beercafesv1.screens.cafelist.CafeListFragment"
+        android:label="CafeListFragment"
+        tools:layout="@layout/fragment_cafe_list">
+        <action
+            android:id="@+id/action_cafeListFragment_to_cafeFragment"
+            app:destination="@id/cafeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.beercafesv1.screens.cafelist.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites"/>
+    <fragment
+        android:id="@+id/cafeFragment"
+        android:name="com.example.beercafesv1.screens.cafelist.CafeFragment"
+        android:label="CafeFragment"
+        tools:layout="@layout/fragment_cafe">
+        <argument
+            android:name="beerCafe"
+            app:argType="com.example.beercafesv1.models.BeerCafeItem" />
+    </fragment>
+
+</navigation>
